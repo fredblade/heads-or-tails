@@ -4,7 +4,6 @@ import { reactive, computed } from 'vue'
 
 const coin = reactive({
       value: 3
-
     });
 function coinflip() {
   coin.value = Math.floor(Math.random() * 2);
@@ -20,9 +19,9 @@ function coinflip() {
       <button class="button" @click="coinflip">Click me!</button>
       <br>
       <br>
-      <img v-if="coin.value === 0" src="/src/assets/tails.png">
-      <img v-if="coin.value === 1" src="/src/assets/heads.png">
-      <img v-if="coin.value === 3" src="/src/assets/coin.png">
+      <img v-if="coin.value === 0" class="image is-128x128" src="/src/assets/tails.png">
+      <img v-if="coin.value === 1" class="image is-128x128" src="/src/assets/heads.png">
+      <img v-if="coin.value === 3" class="image is-128x128" src="/src/assets/coin.png">
     </div>
   </div>
 </template>
